@@ -1,15 +1,13 @@
 package trevel;
 
 public class Citizen {
-    String name;
-    int age;
-    String whereIAm;
-    String nation;
-
-    public Citizen(String name, int age, String whereIAm, String nation){
+    public String name;
+    public String nationality;
+    public Citizen(String name, String nationality){
         this.name = name;
-        this.age = age;
-        this.whereIAm = whereIAm;
-        this.nation=nation;
+        this.nationality = nationality;
+    }
+    public String toString(String name, String nationality){
+        return "이름은"+name+"국적은"+nationality+" 입니다";
     }
 }
