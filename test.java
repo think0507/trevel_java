@@ -1,27 +1,62 @@
 package trevel;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import static trevel.AddArray.loading;
+
 public class test {
     public static void main(String[] args){
-        //국가 생성
-        Country KOREA = new Country("한국", "서울");
-        Country JAPAN = new Country("일본", "도쿄");
-        Country GERMANY = new Country("독일", "함부루크");
-        Country CHINA = new Country("중국", "베이징");
-        Country ITALY = new Country("이탈리아", "파스타");
-        Country BRAZIL = new Country("브라질", "브라질리언");
+        Scanner sc = new Scanner(System.in);
 
-        //국민 생성
-        Citizen A = new Citizen("동렬", "한국");
-        Citizen B = new Citizen("동욱", "중국");
-        Citizen C = new Citizen("정민", "독일");
-        Citizen D = new Citizen("은락", "이탈리아");
-        Citizen E = new Citizen("은섭", "브라질");
-        Citizen F = new Citizen("뽀꿀롬", "중국");
+        //초기데이터 추가
+        loading();
 
-        //국적없는 시민 생성
-        Person person1 = new Person("외노자", null);
-        Person person2 = new Person("외노자2", null);
+        //ArrayList 선언
+        ArrayList<Object> citizenObjects = AddArray.citizenObjects;
 
 
+        //선택지 [1. 시민 생성][2. 시민 여행][3. 시민 이주]
+        boolean flag = true;
+        while(flag){
+
+            //동작이 끝날때마다 현재 배열 목록 보여주기
+            for (Object citizen : citizenObjects) {
+                if (citizen instanceof Citizen) {
+                    System.out.println(((Citizen) citizen).name + ", " + ((Citizen) citizen).nationality);
+                }
+            }
+
+            //선택지 출력
+            System.out.println("[1. 시민 생성 //구현중]  [2. 시민 여행]  [3. 시민 이주] [4. 종료]");
+
+            int n = sc.nextInt();
+            switch (n){
+                //1. 생성일경우
+                case 1 :
+//                    String name = sc.next();
+//                    String nationality = sc.next();
+//                    String whereIAm = sc.next();
+//                    Citizen citizen = new Citizen(name, nationality,whereIAm);
+//                    citizenObjects.add(citizen);
+                    System.out.println("추후 구현예정. 실패");
+                    break;
+
+                //2. 시민여행일경우 changeWhereIAm();     // - 개인, 단체일경우를 오버로딩해서 매개변수 수에따라 다르게 입국
+                case 2 :
+
+                    break;
+                //3. 시민이주일경우 changeNationality();    // - 특정 국적 제외/
+                case 3 :
+                    System.out.println("3");
+                    break;
+
+                //4. 종료
+                case 4 :
+                    flag = false;
+                    break;
+
+            }
+        }
     }
 }
