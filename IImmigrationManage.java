@@ -1,5 +1,5 @@
 package trevel;
 
 public interface IImmigrationManage {
-    void changeWhereIAm();
+    void changeWhereIAm(String name, String whereIAm);
 }

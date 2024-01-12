@@ -1,6 +1,7 @@
 package trevel;
 
 public class Citizen {
+
     public String name;
     public String nationality;
     public String whereIAm;

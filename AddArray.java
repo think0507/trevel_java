@@ -15,12 +15,12 @@ public class AddArray {
         Country BRAZIL = new Country("브라질", "브라질리언");
 
         //국민 생성
-        Citizen A = new Citizen("동렬", "한국", "한국");
-        Citizen B = new Citizen("동욱", "중국","한국");
-        Citizen C = new Citizen("정민", "독일","한국");
-        Citizen D = new Citizen("은락", "이탈리아","한국");
-        Citizen E = new Citizen("은섭", "브라질","한국");
-        Citizen F = new Citizen("뽀꿀롬", "중국","한국");
+        Citizen A = new Citizen("A", "한국", "한국");
+        Citizen B = new Citizen("B", "중국","한국");
+        Citizen C = new Citizen("C", "독일","한국");
+        Citizen D = new Citizen("D", "이탈리아","한국");
+        Citizen E = new Citizen("E", "브라질","한국");
+        Citizen F = new Citizen("F", "중국","한국");
 
         countryObjects.add(KOREA);
         countryObjects.add(JAPAN);
