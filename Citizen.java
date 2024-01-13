@@ -10,7 +10,9 @@ public class Citizen {
         this.nationality = nationality;
         this.whereIAm = whereIAm;
     }
-    public String toString(String name, String nationality, String whereIAm){
+
+    @Override
+    public String toString(){
         return "이름은"+name+"국적은"+nationality+" 입니다";
     }
 }

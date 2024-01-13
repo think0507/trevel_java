@@ -6,6 +6,8 @@ import java.util.Scanner;
 import static trevel.AddArray.loading;
 
 public class test {
+    //public static Country[] countries = fixtureMaker.loadCountries();
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
@@ -26,7 +28,7 @@ public class test {
             //동작이 끝날때마다 현재 배열 목록 보여주기
             for (Object citizen : citizenObjects) {
                 if (citizen instanceof Citizen) {
-                    System.out.println("[이름:"+((Citizen) citizen).name + ", 국적:" + ((Citizen) citizen).nationality+", 위치:" +((Citizen) citizen).whereIAm+"]");
+                    System.out.println(citizen);
                 }
             }
 
