@@ -1,9 +1,13 @@
 package trevel;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class AddArray {
-    public static ArrayList<Object> countryObjects = new ArrayList<>();
-    public static ArrayList<Object> citizenObjects = new ArrayList<>();
+    public static ArrayList<Country> countryObjects = new ArrayList<>();
+
+    public static ArrayList<Citizen> citizenObjects = new ArrayList<>();
 
     public static void loading() {
         //국가 생성
@@ -34,6 +38,12 @@ public class AddArray {
         citizenObjects.add(D);
         citizenObjects.add(E);
         citizenObjects.add(F);
+    }
+
+    public void arrayToStream(){
+        Stream<Country> countryArrayToStream = countryObjects.stream();
+        Stream<Citizen> citizenArrayToStream = citizenObjects.stream();
+        Predicate<Country> countryArrayToStreamPredicate = countryObjects -> Country.getName.equals(name);
     }
 
 }

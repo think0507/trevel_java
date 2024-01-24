@@ -15,7 +15,7 @@ public class test {
         loading();
 
         //ArrayList 선언
-        ArrayList<Object> citizenObjects = AddArray.citizenObjects;
+        ArrayList<Citizen> citizenObjects = AddArray.citizenObjects;
 
 
         //선택지 [1. 시민 생성][2. 시민 여행][3. 시민 이주]

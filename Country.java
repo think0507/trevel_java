@@ -1,6 +1,11 @@
 package trevel;
 
 public class Country {
+
+    public String getName() {
+        return name;
+    }
+
     public String name;
     public String capital;
 
